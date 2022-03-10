@@ -4,6 +4,7 @@ import Header from "../../components/Header";
 
 import formBtnImg from "../../images/formBtn.png";
 import logoImg from "../../images/logo.png";
+import bgImg from "../../images/bgImg.png";
 
 const Services = () => {
   const navigate = useNavigate();
@@ -20,7 +21,16 @@ const Services = () => {
 
   return (
     <>
+      <div className="absolute w-full min-h-screen z-10">
+        <img
+          src={bgImg}
+          alt=""
+          className="absolute w-full h-[100%] object-cover z-10"
+        />
+      </div>
+
       <Header />
+
       <div
         onClick={navigateToHome}
         className="absolute inset-0  z-10"

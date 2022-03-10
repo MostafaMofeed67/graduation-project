@@ -1,4 +1,3 @@
-import React from "react";
 import {
   arrowUp,
   facebookIcon,
@@ -7,6 +6,10 @@ import {
 } from "../helpers/icons/icons";
 
 const Footer = () => {
+  function ScrollToTop() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
   return (
     <footer className="bg-primary ">
       <div className="container flex items-center justify-between py-5">
@@ -21,7 +24,10 @@ const Footer = () => {
             جميع الحقوق محفوظة © 2021 للهيئة العاملة للتأمين الصحي الشامل
           </p>
 
-          <p className="bg-gray-900/20 text-white fill-current rounded-lg cursor-pointer">
+          <p
+            className="bg-gray-900/20 text-white fill-current rounded-lg cursor-pointer"
+            onClick={ScrollToTop}
+          >
             {arrowUp}
           </p>
         </div>

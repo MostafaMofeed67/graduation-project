@@ -4,6 +4,7 @@ import Header from "../../components/Header";
 
 import imgProfile from "../../images/profile.png";
 import formBtnImg from "../../images/formBtn.png";
+import bgImg from "../../images/bgImg.png";
 
 const Profile = () => {
   const navigate = useNavigate();
@@ -20,10 +21,19 @@ const Profile = () => {
 
   return (
     <>
+      <div className="absolute w-full min-h-screen z-10">
+        <img
+          src={bgImg}
+          alt=""
+          className="absolute w-full h-[100%] object-cover z-10"
+        />
+      </div>
+
       <Header />
+
       <div
         onClick={navigateToHome}
-        className="absolute inset-0  z-10"
+        className="absolute inset-0  z-20"
         style={{ background: "rgba(2,25,37,0.5411764705882353 )" }}
       ></div>
 
@@ -48,7 +58,7 @@ const Profile = () => {
         >
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-8">
-              <label htmlFor="name" className="w-[130px]">
+              <label htmlFor="name" className="w-[150px]">
                 الاسم رباعى
               </label>
               <input
@@ -61,7 +71,7 @@ const Profile = () => {
 
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-8">
-              <label htmlFor="name" className="w-[130px]">
+              <label htmlFor="name" className="w-[150px]">
                 فرع التأمين
               </label>
               <input
@@ -74,7 +84,7 @@ const Profile = () => {
 
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-8">
-              <label htmlFor="name" className="w-[130px]">
+              <label htmlFor="name" className="w-[150px]">
                 الرقم القومى
               </label>
               <input
@@ -87,7 +97,7 @@ const Profile = () => {
 
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-8">
-              <label htmlFor="name" className="w-[130px]">
+              <label htmlFor="name" className="w-[150px]">
                 رقم الهاتف
               </label>
               <input
