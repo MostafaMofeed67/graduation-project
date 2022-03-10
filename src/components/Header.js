@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { arrowDown, searchIcon } from "../helpers/icons/icons";
+import { arrowDown, arrowUp, searchIcon } from "../helpers/icons/icons";
 
 import tameeniLogoImage from "../images/logo.png";
 import logoImage from "../images/UHIA.png";
@@ -60,20 +60,15 @@ const Header = () => {
           </NavLink>
         </li>
         <li className="flex  items-center">
-          <NavLink
-            onClick={toggleList1Handler}
-            to="/about"
-            className={({ isActive }) =>
-              isActive
-                ? "text-secondary  flex fill-current relative"
-                : "text-primary  flex fill-current relative"
-            }
+          <p
+            className="text-primary  flex fill-current relative cursor-pointer"
+            onClick={list1ShowHandler}
           >
             عن الهيئة
-          </NavLink>
+          </p>
           <div className="relative text-primary fill-current">
             <span className=" cursor-pointer" onClick={list1ShowHandler}>
-              {arrowDown}
+              {showList1 ? arrowUp : arrowDown}
             </span>
             {showList1 && (
               <ul className="absolute right-[-160px] bottom-[-215px] bg-white w-48 border-t-2 border-secondary">
@@ -93,20 +88,15 @@ const Header = () => {
           </div>
         </li>
         <li className="flex  items-center">
-          <NavLink
-            onClick={toggleList1Handler}
-            to="/about"
-            className={({ isActive }) =>
-              isActive
-                ? "text-secondary  flex fill-current relative"
-                : "text-primary  flex fill-current relative"
-            }
+          <p
+            className="text-primary  flex fill-current relative cursor-pointer"
+            onClick={list2ShowHandler}
           >
             اتصل بنا
-          </NavLink>
+          </p>
           <div className="relative text-primary fill-current">
             <span className=" cursor-pointer" onClick={list2ShowHandler}>
-              {arrowDown}
+              {showList2 ? arrowUp : arrowDown}
             </span>
             {showList2 && (
               <ul className="absolute right-[-130px] bottom-[-116px] bg-white w-48 border-t-2 border-secondary">
