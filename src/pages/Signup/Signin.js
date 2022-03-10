@@ -17,17 +17,17 @@ const Signin = () => {
           <input
             type="text"
             placeholder="WorkPlace"
-            className="rounded-lg h-10 w-96 px-5 text-left"
+            className="rounded-lg h-10 w-96 px-5 text-left focus:outline-none border-2 border-transparent focus:border-primary transition-colors"
           />
           <input
             type="text"
-            placeholder="WorkPlace"
-            className="rounded-lg h-10 w-96 px-5 text-left"
+            placeholder="User_ID"
+            className="rounded-lg h-10 w-96 px-5 text-left focus:outline-none border-2 border-transparent focus:border-primary transition-colors"
           />
           <input
             type="text"
-            placeholder="WorkPlace"
-            className="rounded-lg h-10 w-96 px-5 text-left"
+            placeholder="Name"
+            className="rounded-lg h-10 w-96 px-5 text-left focus:outline-none border-2 border-transparent focus:border-primary transition-colors"
           />
 
           <button className="uppercase bg-primary-light self-center rounded-2xl py-3 px-6 font-black text-white">
