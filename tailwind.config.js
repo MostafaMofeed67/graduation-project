@@ -34,6 +34,10 @@ module.exports = {
         primary: { DEFAULT: "#4bb4e8", light: "#2bdde2", dark: "#135f8a" },
         secondary: "#d90b0b",
       },
+      backgroundImage: {
+        signupImg:
+          "linear-gradient(to bottom, rgba(75, 180, 232, 0.3), rgba(75, 180, 232, 0.3)), url('/src/images/Health_photo.png')",
+      },
     },
   },
   plugins: [],
