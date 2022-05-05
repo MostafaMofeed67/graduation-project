@@ -5,8 +5,13 @@ import homeImage from "../../images/Health_photo.png";
 import eyeImage from "../../images/ic_visibility_2.png";
 import readImage from "../../images/ic_message_24px.png";
 import Footer from "../../components/Footer";
+import StartPage from "./StartPage/StartPage";
 
-const Home = () => {
+const Home = ({ isStart }) => {
+  if (isStart) {
+    return <StartPage />;
+  }
+
   return (
     <>
       <Header />
@@ -37,41 +42,6 @@ const Home = () => {
             أن يكون لنا تأثير في تحسين صحة الشعب المصري بتأمين العلاج المناسب
             بجودة عالية وبشكل مستدام
           </p>
-        </div>
-      </div>
-
-      <div className="bg-primary-dark py-10 text-white">
-        <div className="container flex items-center justify-between">
-          <div>
-            <h1 className="text-2xl font-bold mb-2">
-              القـانـون واللائـحـة الـتنفيـذيـة
-            </h1>
-            <p className="font-bold">
-              قانون نظام التأمين الصحي الشامل واللائحة التنفيذية
-            </p>
-            <div className="flex items-center gap-10 mt-3">
-              <p className="border-2 border-white py-4 px-7">
-                قانون رقم 2 لسنة 2018
-              </p>
-              <p className="border-2 border-white py-4 px-7">
-                اللائحة التنفيذية
-              </p>
-            </div>
-          </div>
-          <div>
-            <p className="bg-primary py-3 mb-5 px-32 text-center font-bold">
-              زور فروعنا
-            </p>
-            <p className="bg-primary py-3 mb-5 px-32 text-center font-bold">
-              تحدث معنا
-            </p>
-            <p className="bg-primary py-3 mb-2 px-32 text-center font-bold">
-              الخط الساخن
-            </p>
-            <p className="border-2 border-white py-3 text-center font-black text-primary-light">
-              البريد الإلكتروني info@uhia.gov.eg
-            </p>
-          </div>
         </div>
       </div>
 

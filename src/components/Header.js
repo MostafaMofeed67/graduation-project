@@ -71,17 +71,47 @@ const Header = () => {
               {showList1 ? arrowUp : arrowDown}
             </span>
             {showList1 && (
-              <ul className="absolute right-[-160px] bottom-[-215px] bg-white w-48 border-t-2 border-secondary">
+              <ul className="absolute right-[-160px] bottom-[-215px] bg-white w-48 border-t-2 border-secondary shadow-lg">
                 <li className="py-1 pr-2 border-b border-primary">
-                  مجلس الادارة
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "text-secondary " : "text-primary "
+                    }
+                    to="/management"
+                  >
+                    مجلس الادارة
+                  </NavLink>
                 </li>
                 <li className="py-1 pr-2 border-b border-primary">
-                  الادارة التنفيذية
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "text-secondary " : "text-primary "
+                    }
+                    to="/management2"
+                  >
+                    الادارة التنفيذية
+                  </NavLink>
                 </li>
                 <li className="py-1 pr-2 border-b border-primary">التقارير</li>
-                <li className="py-1 pr-2 border-b border-primary">عن النظام</li>
                 <li className="py-1 pr-2 border-b border-primary">
-                  شركاء النجاح
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "text-secondary " : "text-primary "
+                    }
+                    to="/about"
+                  >
+                    عن النظام
+                  </NavLink>
+                </li>
+                <li className="py-1 pr-2 ">
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "text-secondary " : "text-primary "
+                    }
+                    to="/partners"
+                  >
+                    شركاء النجاح
+                  </NavLink>
                 </li>
               </ul>
             )}
@@ -99,11 +129,27 @@ const Header = () => {
               {showList2 ? arrowUp : arrowDown}
             </span>
             {showList2 && (
-              <ul className="absolute right-[-130px] bottom-[-116px] bg-white w-48 border-t-2 border-secondary">
-                <li className="py-1 pr-2 border-b border-primary">
-                  الادارة التنفيذية
+              <ul className="absolute right-[-130px] bottom-[-116px] bg-white w-48 border-t-2 border-secondary shadow-lg">
+                <li className="py-1 pr-2 ">
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "text-secondary " : "text-primary "
+                    }
+                    to="/branches"
+                  >
+                    الفروع
+                  </NavLink>
                 </li>
-                <li className="py-1 pr-2 border-b border-primary">الفروع</li>
+                <li className="py-1 pr-2 border-b border-primary">
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "text-secondary " : "text-primary "
+                    }
+                    to="/management3"
+                  >
+                    الادارة التنفيذية
+                  </NavLink>
+                </li>
               </ul>
             )}
           </div>
