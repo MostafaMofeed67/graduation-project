@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import HeaderInfo from "../../components/HeaderInfo";
 
 const Branches = () => {
   const [luxur, setLuxur] = useState(true);
@@ -18,6 +19,8 @@ const Branches = () => {
   return (
     <>
       <Header />
+      <HeaderInfo heading="الفروع" link="/branches" />
+
       <div className="flex gap-5 justify-center mb-8">
         <div
           className="bg-[#4bb4e89a] py-6 px-10 rounded-md text-center shadow-md cursor-pointer "

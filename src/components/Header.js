@@ -92,7 +92,16 @@ const Header = () => {
                     الادارة التنفيذية
                   </NavLink>
                 </li>
-                <li className="py-1 pr-2 border-b border-primary">التقارير</li>
+                <li className="py-1 pr-2 border-b border-primary">
+                  <NavLink
+                    className={({ isActive }) =>
+                      isActive ? "text-secondary " : "text-primary "
+                    }
+                    to="/reports"
+                  >
+                    التقارير
+                  </NavLink>
+                </li>
                 <li className="py-1 pr-2 border-b border-primary">
                   <NavLink
                     className={({ isActive }) =>

@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import HeaderInfo from "../../components/HeaderInfo";
 
 import img1 from "../../images/Screenshot (179).png";
 import img2 from "../../images/Screenshot (180).png";
@@ -13,6 +14,7 @@ const Partners = () => {
   return (
     <>
       <Header />
+      <HeaderInfo heading="شركاء النجاح" link="/partners" />
 
       <div className="grid grid-cols-3 justify-items-center">
         <div>

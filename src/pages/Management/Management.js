@@ -17,11 +17,13 @@ import img14 from "../../images/ebrahiem.png";
 
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import HeaderInfo from "../../components/HeaderInfo";
 
 const Management = () => {
   return (
     <>
       <Header />
+      <HeaderInfo heading="مجلس الاداره" link="/management" />
 
       <div className="flex flex-col items-center mb-10 ">
         <img src={img12} alt="" className="w-72" />

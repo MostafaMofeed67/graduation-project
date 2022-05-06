@@ -8,11 +8,13 @@ import img17 from "../../images/17.png";
 
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import HeaderInfo from "../../components/HeaderInfo";
 
 const Management2 = () => {
   return (
     <>
       <Header />
+      <HeaderInfo heading="الادارة التنفيذيه" link="/management2" />
 
       <div className="flex flex-col items-center mb-10">
         <img src={img19} alt="" className="w-72" />
