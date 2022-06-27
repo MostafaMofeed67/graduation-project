@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import LoadingSpinner from "../../helpers/LoadingSpinner";
 import useInput from "../../hooks/useInput";
 
 import logo from "../../images/logoBig.png";
 
 const Signin = ({ onIsStarttChange }) => {
   const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(false);
 
   const {
     value: workPlaceName,
@@ -32,7 +34,11 @@ const Signin = ({ onIsStarttChange }) => {
   const submitFormHandler = (e) => {
     e.preventDefault();
     onIsStarttChange();
-    navigate("/");
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      navigate("/");
+    }, 3000);
   };
 
   const workPlaceClasses = workPlaceIsInvalid
@@ -106,12 +112,16 @@ const Signin = ({ onIsStarttChange }) => {
             )}
           </div>
 
-          <button
-            disabled={!workPlaceIsValid || !userIDIsValid || !userIsValid}
-            className="uppercase bg-primary-light self-center rounded-2xl py-3 px-6 font-black text-white disabled:bg-slate-200 disabled:cursor-not-allowed"
-          >
-            Sign in
-          </button>
+          {isLoading ? (
+            <LoadingSpinner />
+          ) : (
+            <button
+              disabled={!workPlaceIsValid || !userIDIsValid || !userIsValid}
+              className="uppercase bg-primary-light self-center rounded-2xl py-3 px-6 font-black text-white disabled:bg-slate-200 disabled:cursor-not-allowed"
+            >
+              Sign in
+            </button>
+          )}
         </form>
       </div>
     </div>

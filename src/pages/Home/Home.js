@@ -1,10 +1,8 @@
-import React from "react";
-import Header from "../../components/Header";
-
-import homeImage from "../../images/Health_photo.png";
-import eyeImage from "../../images/ic_visibility_2.png";
-import readImage from "../../images/ic_message_24px.png";
 import Footer from "../../components/Footer";
+import Header from "../../components/Header";
+import homeImage from "../../images/Health_photo.png";
+import readImage from "../../images/ic_message_24px.png";
+import eyeImage from "../../images/ic_visibility_2.png";
 import StartPage from "./StartPage/StartPage";
 
 const Home = ({ isStart }) => {

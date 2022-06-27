@@ -1,17 +1,26 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import service1Img from "../../../images/service1 (1).jpg";
 import service2Img from "../../../images/service2 (2).jpg";
 import service3Img from "../../../images/service3 (3).jpg";
 
 import StarIcon from "@mui/icons-material/Star";
+import { backIcon } from "../../../helpers/icons/icons";
 
 const ServicesDetails = () => {
   let { id } = useParams();
 
   return (
     <div className="w-full min-h-screen bg-[#eee] py-10 px-12">
+      <div className="flex justify-end">
+        <Link
+          to="/services"
+          className="cursor-pointer text-primary-dark fill-current bg-gray-300 p-1 rounded-full"
+        >
+          {backIcon}
+        </Link>
+      </div>
       <h1 className="text-3xl mb-10 font-extrabold text-primary-dark text-center mt-16">
         {id === "s1"
           ? "سياسات وإجراءات التحويل"
@@ -19,7 +28,6 @@ const ServicesDetails = () => {
           ? "دخول العميل لمستشفى متعاقد مع التأمين الصحى في حالات الطوارئ"
           : "نقل الخدمات الطبيه بين الفروع"}
       </h1>
-
       <div className="flex justify-between  gap-16">
         <div>
           <div>
